@@ -1,0 +1,78 @@
+.bg1 { 
+    /* The image used */
+    background-image: url('/assets/images/oferte.jpg');
+  
+    /* Full height */
+    height: 100% !important; 
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+ 
+.view
+{ 
+    width: 1000px;
+    height: 650px;
+    margin-top: 100px;
+    margin-right: 40px;
+    margin-left: 100px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: black;
+    opacity: 0.6;
+    color: white;
+}
+.inregistrare
+{
+    margin-top: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 40px;
+    margin-left: 200px;
+    margin-top: 3rem!important;
+    font-size: 1vw;
+}
+.flex-container{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.flex-container > div{
+    margin:10px;
+    padding:15px;
+}
+
+.flex-container > div:hover{
+   cursor:pointer;
+}
+
+.buton_rezervare
+{
+    background-color: red;
+    color:white;
+}
+
+.buton_rezervare:hover
+{
+    background-color: white;
+    color:black;
+}
+
+.descriere
+{
+    width: 50vw !important;
+    margin-left: 6vw;
+    text-align: center;
+    margin-top: 6vh;
+}
+
+.imagine-oferta
+{
+    margin-top: 6vh;
+}

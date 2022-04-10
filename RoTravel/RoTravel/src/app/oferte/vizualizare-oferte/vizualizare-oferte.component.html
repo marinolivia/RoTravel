@@ -1,0 +1,44 @@
+<div class="bg1">
+    <div class="inregistrare">
+        <div class="view">
+            <div *ngIf ="destinatieSelectata">
+                <div class="flex-container">
+                    <ng-container *ngFor="let locatie of locatii">
+                        <div (click)="onClickDestination(locatie.locatie)">
+                            <img [src]="locatie.image" width= "275" height= "183">
+                            <h3 style="font-size: 1.2vw;">{{locatie.locatie}}</h3>
+                            <h4 style="font-size: 0.9vw;">Proprietăți disponibile: {{locatie.proprietatiDisponibile}}</h4>
+                        </div>
+                    </ng-container>
+                </div>
+            </div> 
+            <div *ngIf ="locatieSelectata">
+                <div class="flex-container">
+                    <ng-container *ngFor="let oferta of oferte">
+                        <div (click)="onClickOfert(oferta.numeOferta)">
+                            <img [src]="oferta.imagine" width= "275" height= "183">
+                            <h3 style="font-size: 1.2vw;">{{oferta.numeOferta}}</h3>
+                            <h4 style="font-size: 0.9vw;">Pret: {{oferta.pret}}</h4>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+            <div *ngIf ="ofertaSelectata">
+                <!-- Div ul pentru oferta selectata cand ofertaSelectata devine true-->
+                <ng-container *ngIf="oferta">
+                        <div>
+                            <img [src]="oferta.imagine" width= "280" height= "185" class = "imagine-oferta">
+                            <h3>{{oferta.numeOferta}}</h3>
+                            <h4>Pret: {{oferta.pret}}</h4>
+                            <p class ="descriere">{{oferta.descriere}}</p>
+                        </div>
+                        <div *ngIf="isAuthenticated">
+                            <div (click)="onClickRezervare(oferta.numeOferta, oferta.pret, oferta.imagine)">
+                                <button class = "btn btn-indigo waves-effect waves-light buton buton_rezervare">Rezervă</button>
+                            </div>
+                        </div> 
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

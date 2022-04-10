@@ -1,0 +1,18 @@
+<div class='asezare'>
+<img class='img-fluid' src='/assets/images/logo.png' alt='logo'>
+<nav class="navbar navbar-dark bg-inverse bg1">
+    <div class="container">
+        <ul class="nav navbar-nav dist" routerLinkActive="active">
+            <li class="nav-item "><a class="nav-link menu" routerLink="home"><b>Home</b></a></li>
+            <li class="nav-item "><a class="nav-link menu" routerLink="oferte">Oferte</a></li>
+            <li class="nav-item " *ngIf="!isAuthenticated"><a class="nav-link menu" routerLink="utilizatori">Autentificare</a></li>
+            <li class="nav-item " *ngIf="!isAuthenticated"><a class="nav-link menu" routerLink="utilizatori/new">Inregistrare</a></li>
+            <li class="nav-item" *ngIf="isAuthenticated"><a class="nav-link menu" routerLink="rezervari">Rezervarile Tale</a></li>
+            <li class="nav-item" *ngIf="isAdmin"><a class="nav-link menu" routerLink="utilizatori/gestionare">Management utilizatori</a></li>
+            <li class="nav-item" *ngIf="isProprietar"><a class="nav-link menu" routerLink="oferte/adauga">Adauga oferta</a></li>
+            <li class="nav-item" *ngIf="isAuthenticated"><a class="nav-link menu" routerLink="home" (click)="logout()">Deconectare</a></li>
+        </ul>
+    </div>
+</nav>
+</div>
+<router-outlet></router-outlet>

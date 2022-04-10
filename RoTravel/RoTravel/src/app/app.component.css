@@ -1,0 +1,30 @@
+
+.bg1 { 
+    margin-top: 40px;
+    width: 100% !important;
+  
+  }
+  .img-fluid {
+    width: 20vw !important;
+    height: 15vh !important;
+    
+  }
+ .menu{
+   margin-left: 50px;
+ }
+ .asezare{
+   display: flex;
+   flex-direction: row;
+   flex-basis: auto;
+   height: 15vh;
+ }
+ .dist{
+   
+   margin-left: 30vw;
+ }
+
+ .container{
+   width: 87vw;
+   margin-left: -5vw !important;
+   font-size: 1.1vw !important;
+ }

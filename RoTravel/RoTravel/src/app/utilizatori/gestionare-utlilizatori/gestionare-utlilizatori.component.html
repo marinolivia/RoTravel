@@ -1,0 +1,31 @@
+<div class="bg1">
+    <div class="vizualizare">
+        <div class="view">
+            <div class="flex-content">
+                <div >
+                    <ng-container *ngFor="let u of utilizatori">
+                        <div class="flex-container">
+                            <div class = "div-firstName">
+                                <p>{{u.firstName}}</p>
+                            </div>
+                            <div class="div-lastName">
+                                <p>{{u.lastName}}</p>
+                            </div>
+                            <div class="div-email">
+                                <p>Email: {{u.email}}</p>
+                            </div>
+                            <div class="div-cont">
+                                <p>Cont: {{u.tipCont}}</p>
+                            </div>
+                            <div class = "div-stergere" > 
+                                <div (click)="onClickStergere(u.firstName, u.lastName, u.email, u.tipCont, u.id, u.password, u.cnp, u.telefon, u.rezervari)">
+                                    <button class="button-stergere">Sterge</button>
+                                </div>
+                            </div>        
+                        </div>
+                    </ng-container>
+                </div>
+            </div>  
+        </div> 
+    </div>  
+</div>

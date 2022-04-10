@@ -1,0 +1,36 @@
+<form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+<div class = "autentificare">
+    <div class="view">
+        <div class = "div-autentificare col-md-6 col-xl-5 mb-4" >
+            <div class = "div-autentificare " data-wow-delay="0.3s">
+                <div class = "text-center">
+                    <h3 class = "text-white title">Autentificare</h3>
+                    <hr ckass = "hr-light" style = "width: 300px;">
+                </div>
+                <div class = "md-form">
+                    <i class = "fa fa-envelope prefix text-white">    </i>
+                    <input type = "email" [(ngModel)]="user.email" required email name = "email" class = "white-text-form-control" placeholder="Adresa de email" style = "text-align: center; font-size: 1.1vw;">
+                </div>
+                <br/>
+
+                <div class = "md-form">
+                    <i class="fa fa-lock prefix white-text">    </i>
+                    <input type = "password" [(ngModel)]="user.password" required minlength="6" name = "password" class = "white-text-form-control" placeholder="Parola" style = "text-align: center; font-size: 1.1vw;">
+                </div>
+                <br/>
+                <div>
+                    <button class = "btn btn-indigo waves-effect waves-light buton" [disabled]="!authForm.valid">Autentificare</button>
+                </div>  
+            </div>
+            
+            <div class = "cont">
+                <p style = "margin-right: 30px; margin-top: 3vh;">Nu ai un cont încă?</p>
+                <div>
+                    <button class = "btn btn-indigo waves-effect waves-light inregistrare" style="margin-top: 3vh;height:28px; color: gray;" [routerLink]="'/utilizatori/new'">Înregistrare</button>
+                </div>
+            </div> 
+        </div>  
+         
+    </div>
+</div>
+</form>
